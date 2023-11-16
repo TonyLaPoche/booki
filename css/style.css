@@ -1,22 +1,3 @@
-/****** MediaQueries ***********/
-
-/* Large devices (desktops, less/equal than 1440px) */
-@media only screen and (min-width: 1440px) {
-    /* ... */
-}
-
-
-
-
-/* tablette devices ( <= 1024 & >= 768 pixel) */
-@media only screen and (max-width: 1024) and (min-width: 768px) {
-    /* ... */
-}
-
-/* mobile devices (<= 768px ) */
-@media only screen and (max-width: 767.98px) {
-    /* ... */
-}
 
 /****** General ***********/
 * {
@@ -38,6 +19,7 @@ body {
     justify-content: center;
     box-sizing: border-box;
     padding: 0;
+    margin: 0;
 }
 
 /****** Headers ***********/
