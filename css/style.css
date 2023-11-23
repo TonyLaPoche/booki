@@ -29,7 +29,7 @@ body {
     gap: 30px;
 }
 
-section > h2 {
+h2, h3 {
     margin: 0;
 }
 
@@ -216,7 +216,17 @@ a {
 .sub-informations {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
+}
+
+.sub-informations span {
+    border: 1px solid var(--main-bg-color);
+    border-radius: 50%;
+    min-width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-title {
@@ -254,7 +264,7 @@ a {
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
-    justify-content: space-between;
+    gap: 40px;
 }
 
 .hebergements-and-populaires section {
@@ -270,6 +280,15 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hebergements-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
 }
 
 /****** Populaires ***********/
