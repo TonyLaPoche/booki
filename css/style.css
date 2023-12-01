@@ -36,9 +36,6 @@ h2, h3 {
 p {
     margin: 0;
 }
-img {
-    width: 100px;
-}
 
 ul {
     padding: 0;
@@ -51,7 +48,7 @@ a {
 }
 
 .card {
-    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.10);
 }
 
 /****** Headers ***********/
@@ -60,6 +57,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 0 auto;
 }
 
 #logo_booki {
@@ -246,13 +244,10 @@ main {
 .card {
     background-color: white;
     border-radius: 20px;
-    padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-.card img {
-    object-fit: cover;
-}
+
 
 .card-title {
     font-size: 16px;
@@ -307,6 +302,8 @@ main {
     box-sizing: border-box;
     gap: 4px;
     max-height: 207.5px;
+    padding: 5px;
+
 }
 
 .hebergements-cards img {
@@ -363,6 +360,7 @@ a:hover > h3 {
 
 .populaires-cards .card {
     display: flex;
+    padding: 5px;
     max-height: 146px;
 }
 
@@ -386,8 +384,38 @@ a:hover > h3 {
     margin: 0;
 }
 
+/****** Activités ***********/
 
+.activities__container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
+.activities__container .activities-cards {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.activities-card {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.activities-card img {
+    width: 100%;
+    height: 380px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.activities-card p {
+    padding: 20px 19px;
+    font-weight: 700;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 /****** Media queries ***********/
@@ -441,11 +469,14 @@ a:hover > h3 {
         font-size: 13px;
     }
 }
-
+.activities-card img {
+    height: 200px;
+}
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     main {
         padding: 0;
+        gap: 35px;
     }
     .main-container {
         padding: 0;
@@ -521,8 +552,8 @@ a:hover > h3 {
         font-size: 14px;
     }
 
-    .hebergements-and-populaires section {
-        padding: 15px;
+    .hebergements-and-populaires .populaires {
+        padding: 30px;
     }
 
     /****** Hebergements Mobile ***********/
@@ -543,6 +574,7 @@ a:hover > h3 {
 
     .hebergements-and-populaires .populaires {
         border-radius: 0;
+        padding: 30px 20px;
     }
 
     .populaires-cards {
@@ -551,6 +583,13 @@ a:hover > h3 {
     }
     .populaires-cards a {
         width: 100%;
+    }
+
+    /****** Activities Mobile ***********/
+
+    .activities__container .activities-cards {
+        flex-direction: column;
+        gap: 15px;
     }
     
 }
