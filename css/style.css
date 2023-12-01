@@ -412,6 +412,7 @@ a:hover > h3 {
     }
     .hebergements-and-populaires {
         flex-direction: column;
+        gap: 50px;
     }    
 /****** Hebergements Tab ***********/
     .hebergements {
@@ -420,7 +421,6 @@ a:hover > h3 {
 
     .populaires {
         width: 100%;
-        margin-top: 50px;
     }
 
     .populaires-cards {
@@ -520,9 +520,15 @@ a:hover > h3 {
     .filters ul li {
         font-size: 14px;
     }
+
+    .hebergements-and-populaires section {
+        padding: 15px;
+    }
+
     /****** Hebergements Mobile ***********/
     .hebergements-and-populaires {
         flex-direction: column-reverse;
+        gap: 15px;
     }
     
     .hebergements {
@@ -533,6 +539,18 @@ a:hover > h3 {
         display: flex;
         flex-direction: column;
     }
+    /****** Populaires Mobile ***********/
 
+    .hebergements-and-populaires .populaires {
+        border-radius: 0;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .populaires-cards a {
+        width: 100%;
+    }
     
 }
