@@ -33,6 +33,7 @@ header {
 
 .main-container {
     width: 100%;
+    margin: 0 auto;
     box-sizing: border-box;
     max-width: 1440px;
     display: flex;
@@ -643,7 +644,7 @@ footer {
         display: flex;
         flex-direction: column;
     }
-    
+
     .populaires-cards a {
         width: 100%;
     }
