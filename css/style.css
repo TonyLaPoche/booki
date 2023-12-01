@@ -50,6 +50,10 @@ a {
     text-decoration: none;
 }
 
+.card {
+    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.1);
+}
+
 /****** Headers ***********/
 
 #nav_container {
@@ -273,7 +277,6 @@ main {
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
@@ -284,6 +287,7 @@ main {
 
 /****** Hebergements ***********/
 .hebergements {
+    background-color: var(--main-bg-color);
     width: 65%;
     height: fit-content;
     display: flex;
@@ -408,7 +412,7 @@ a:hover > h3 {
     .hebergements-and-populaires {
         flex-direction: column;
     }    
-
+/****** Hebergements Tab ***********/
     .hebergements {
         width: 100%;
     }
@@ -515,4 +519,19 @@ a:hover > h3 {
     .filters ul li {
         font-size: 14px;
     }
+    /****** Hebergements Mobile ***********/
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+    
+    .hebergements {
+        background-color: white ;
+    }
+
+    .hebergements-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
 }
