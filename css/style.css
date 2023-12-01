@@ -63,6 +63,7 @@ a {
     box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.10);
 }
 
+
 /****** Headers ***********/
 
 #nav_container {
@@ -306,9 +307,8 @@ main {
 .hebergements-cards .card {
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
+    box-sizing: content-box;
     gap: 4px;
-    max-height: 207.5px;
     padding: 5px;
 }
 
