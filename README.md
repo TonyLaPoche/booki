@@ -1,6 +1,8 @@
 # Booki Reproduction
 
-Bienvenue dans le projet de reproduction de la maquette "Booki". Ce projet vise à recréer la maquette disponible sur Figma à l'aide d'un fichier HTML, de fichiers CSS et d'un dossier d'images.
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
+ Bienvenue dans le projet de reproduction de la maquette "Booki". Ce projet vise à recréer la maquette disponible sur Figma à l'aide d'un fichier HTML, de fichiers CSS et d'un dossier d'images.
 
 ## Maquette
 
@@ -39,3 +41,7 @@ Ce projet a été réalisé par Antoine Terrade.
 Un grand merci à Loïc pour la mise à disposition de la maquette originale.
 
 N'hésitez pas à explorer le code source pour voir comment la maquette a été reproduite. Si vous avez des questions ou des suggestions, n'hésitez pas à créer une issue.
+
+[![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/fo-real.svg)](https://forthebadge.com)
