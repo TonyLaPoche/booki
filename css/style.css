@@ -10,6 +10,11 @@
     --filter-bg-color: #DEEBFF;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 79px;
+}
+
 .fa-solid {
     color: var(--main-color);
 }
@@ -18,6 +23,12 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+header {
+    position: relative;
+    margin-bottom: 79px;
+    z-index: 1;
 }
 
 .main-container {
@@ -58,6 +69,11 @@ a {
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 auto;
+    max-height: 79px;
+    position: fixed;
+    max-width: 1440px;
+    width: 100%;
+    background: white;
 }
 
 #logo_booki {
@@ -83,19 +99,20 @@ nav img {
 
 .nav_item {
     padding-top: 15px;
+    border-top: 2px solid transparent;
 }
 
-.nav_item button {
-    border: none;
-    background: none;
-    color: inherit;
-    cursor: pointer;
+.nav_item a:hover {
+    text-decoration: none;
 }
 
-.active {
+.nav_item:hover {
+    transition: all 0.3s ease-in-out;
     color:var(--main-color);
-    border-top: 2px solid var(--main-color);
+    border-color: var(--main-color);
+    text-decoration: none;
 }
+
 /****** Main ***********/
 main {
     padding: 0 50px;
@@ -149,7 +166,6 @@ main {
     font-weight: bold;
     border: none;
     border-radius: 0 15px 15px 0;
-    
 }
 
 .searchbar form button span {
@@ -188,8 +204,6 @@ main {
     color: black;
 }
 
-
-
 /* **** filters **** */
 .filters {
     display: flex;
@@ -214,6 +228,7 @@ main {
     gap: 10px;
     font-weight: 700;
 }
+
 .filters ul li:hover {
     cursor: pointer;
     background: var(--blue-light, #DEEBFF);
@@ -247,8 +262,6 @@ main {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-
-
 .card-title {
     font-size: 16px;
 }
@@ -261,10 +274,6 @@ main {
     color: var(--main-bg-color)
 }
 
-
-
-
-
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -276,9 +285,6 @@ main {
     padding: 30px;
     box-sizing: border-box;
 }
-
-
-
 
 /****** Hebergements ***********/
 .hebergements {
@@ -303,7 +309,6 @@ main {
     gap: 4px;
     max-height: 207.5px;
     padding: 5px;
-
 }
 
 .hebergements-cards img {
@@ -312,7 +317,6 @@ main {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     object-fit: cover;
-
 }
 
 .hebergements-cards .card-content {
@@ -322,7 +326,6 @@ main {
     align-items: flex-start;
     gap: 8px;
     align-self: stretch;
-
 }
 
 .card-content > .card-txt {
@@ -333,10 +336,10 @@ main {
     align-self: stretch;
 }
 
-
-a:hover > h3 {
+a:hover > h3 , li a:hover {
     text-decoration: underline;
 }
+
 /****** Populaires ***********/
 .populaires {
     background-color: var(--main-bg-color);
@@ -369,6 +372,7 @@ a:hover > h3 {
     height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    object-fit: cover;
 }
 
 .populaires-cards .card-content {
@@ -416,20 +420,43 @@ a:hover > h3 {
     padding: 20px 19px;
     font-weight: 700;
 }
+/****** Footer ***********/
+
+footer {
+    background-color: var(--main-bg-color);
+    margin:0 50px;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer__containers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer__containers ul {
+    width:100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 /****** Media queries ***********/
 
 /* large devices (Big screen 2K and more, more/equal than 1440px) */
 @media (min-width: 1440px) {
-    /* main {
-        gap: 35px;
-    } */
+    .main-container {
+        margin: 0 auto;
+    }
 }
 
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-
 
     .filters {
         flex-direction: column;
@@ -474,32 +501,61 @@ a:hover > h3 {
 }
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    html {
+        scroll-padding-top: 115px;
+    }
+
     main {
         padding: 0;
         gap: 35px;
     }
+
     .main-container {
         padding: 0;
+        scroll-margin-bottom: 115px;
     }
+
+    header {
+     margin-bottom: 115px;
+    }
+
     #nav_container {
         flex-direction: column;
         align-items: center;
+        max-height: 115px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        width: 100%;
     }
+
     .nav_list {
         border-bottom: #eaeaea solid 1px;
         width: 100%;
         padding: 0;
     }
+
     .nav_item {
         width: 100%;
         text-align: center;
-        padding-bottom: 15px;
         padding-top: 0;
+        border-top: none;
+        border-bottom:2px solid transparent ;
+    }
+    
+    .nav_item a {
+        padding-bottom: 15px;
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 
-    .active {
-        border-top: none;
-        border-bottom: 2px solid var(--main-color);
+    .nav_item:hover {
+        transition: all 0.3s ease-in-out;
+        color:var(--main-color);
+        border-color: var(--main-color);
+        text-decoration: none;
     }
 
     h1 {
@@ -509,6 +565,7 @@ a:hover > h3 {
         line-height: normal;
         margin: 0;
     }
+
     p {
         font-size: 16px;
         font-style: normal;
@@ -516,6 +573,7 @@ a:hover > h3 {
         line-height: normal;
         margin: 0;
     }
+
     .informations-and-filters {
         flex-direction: column;
         align-items: flex-start;
@@ -526,6 +584,7 @@ a:hover > h3 {
     .fa-search {
         display: block;
     }
+
     .searchbar form button {
         border-radius: 15px;
         box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.3);
@@ -535,11 +594,13 @@ a:hover > h3 {
     .searchbar form button span {
         display: none;
     }
+
     .filters {
         max-width: 335px;
         width: 100%;
         min-width: 280px;
     }
+
     .filters ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -557,6 +618,7 @@ a:hover > h3 {
     }
 
     /****** Hebergements Mobile ***********/
+
     .hebergements-and-populaires {
         flex-direction: column-reverse;
         gap: 15px;
@@ -581,6 +643,7 @@ a:hover > h3 {
         display: flex;
         flex-direction: column;
     }
+    
     .populaires-cards a {
         width: 100%;
     }
@@ -590,6 +653,14 @@ a:hover > h3 {
     .activities__container .activities-cards {
         flex-direction: column;
         gap: 15px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin: 0;
+        padding: 30px;
     }
     
 }
