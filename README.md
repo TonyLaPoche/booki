@@ -14,6 +14,10 @@ Le repository est structuré de la manière suivante :
 - **images/**: Le dossier contenant les images nécessaires pour l'application.
 - **styles/**: Le dossier contenant les fichiers CSS pour styler l'application.
 
+## Rendu visuel actif
+
+[Lien de la prévisualisation](https://tonylapoche.github.io/booki_terrade_antoine/)
+
 ## Comment Exécuter le Projet
 
 - Clonez le repository sur votre machine locale :
